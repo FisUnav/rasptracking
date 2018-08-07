@@ -11,4 +11,4 @@ Los archivos son:
 * gpi.py : el código del programa. El código está escrito en Python.
 * requirements.sh : archivo bash para instalar las librerías y software necesario.
 * iconGPI.png : un icono (no es necesario).
-* script.txt : una breve documentación para explicar el funcionamiento del programa.
+* script.md : una breve documentación para explicar el funcionamiento del programa.
