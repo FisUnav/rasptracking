@@ -1,0 +1,1 @@
+En primer lugar, deben instalarse algunas librerías. El programa usa GTK y OpenCV, así como otros componentes que hay que instalar. Todo ello se logra con el bash "requirements.sh". Hay que tener paciencia con las librerías OpenCV, que pueden tardar _horas_ en instalarse.
