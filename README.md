@@ -1,5 +1,7 @@
 # Rasptracking #
 
-Este repositorio git trae una implementación de tracking utilizando Raspberry Pi, OpenCV y GUIzero para la creación de una interfaz sencilla.
+Este repositorio contiene el código para una implementación de Particle Tracking con una Raspberry Pi y su cámara (picamera). 
+
+El código está escrito en Python. 
 
 
