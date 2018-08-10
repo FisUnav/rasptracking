@@ -12,4 +12,4 @@ Los archivos son:
 * LabScript.pdf : un guión de prácticas explicado para los alumnos de primero que realizan esta práctica.
 * requirements.sh : archivo bash para instalar las librerías y software necesario.
 * iconGPI.png : un icono (no es necesario).
-* script.md : una breve documentación para explicar el funcionamiento del programa.
+* script.md : una breve documentación para explicar el funcionamiento del programa (en gran parte repite LabScript.pdf).
