@@ -1,4 +1,4 @@
-El material empleado es: una Raspberry Pi 3B, con carcasa y picamera, que corre en Raspbian; y un péndulo construido con una esfera de plomo de 1 cm. de radio, colgando de un hilo de 54 cm. de largo, pintado de negro, situado delante de una superficie clara.
+El material empleado es: una Raspberry Pi 3B, con carcasa y picamera, que corre en Raspbian; y un péndulo construido con una esfera de plomo de 1 cm. de radio, colgando de un hilo de 54 cm. de largo, pintada de negro, situada delante de una superficie clara.
 Con Raspbian viene un programa llamado omxplayer que permite visualizar vídeos, e instalamos también Mirage, un programa gratuito para visualizar imágenes. 
 La Raspberry Pi debe prepararse instalando algunas algunas librerías, como GTK y OpenCV. Todo ello se logra ejecutando el bash "requirements.sh". Hay que tener paciencia con las librerías OpenCV, que pueden tardar _horas_ en instalarse.
 El programa se lanza ejecutando en una terminal la orden **python3 gpi.py**, que abre una interfaz gráfica de usuario.
