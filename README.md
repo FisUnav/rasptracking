@@ -8,7 +8,7 @@ Para ello, se registra en vídeo el movimiento de un péndulo oscuro sobre fondo
 El programa permite: registrar un vídeo del péndulo; tomar una fotografía del fondo (esta imagen se resta a cada fotograma); analizar el vídeo para encontrar la posición de cada fotograma; y guardar los datos. 
 
 Los archivos son:
-* gpi.py : el código del programa. El código está escrito en Python.
+* gpi.py : el código del programa para implementar la técnica de particle tracking, escrito en Python.
 * LabScript.pdf : un guión de prácticas explicado para los alumnos de primero que realizan esta práctica.
 * requirements.sh : archivo bash para instalar las librerías y software necesario.
 * iconGPI.png : un icono (no es necesario).
