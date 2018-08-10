@@ -14,7 +14,7 @@ A continuación se explica brevemente el procedimiento típico. (En el documento
 The camera is focused at 50 cm. Place the camera at such a distance from the pendulum. Set the white screen behind the pendulum. Lighting is of crucial importance; use natural light if possible and avoid the shadow of the sphere as much as possible.
 You will take an image of the background, without the pendulum. After that, you will want a short (~4 seconds) video to test that everything is working fine. Once you have fixed the system variables, you will record a longer (20 seconds) video. The program will then track the bead and provide you the measurements for the period.
 Proceed by completing the following steps.
-1.	Open a terminal by clicking on the terminal icon:
+1.	Open a terminal by clicking on the terminal icon.
 2.	Type python3 gpi.py to launch the program (it has a graphical interface with several buttons).
 3.	Place the pendulum in front of the camera, at 50 cm. Put the white screen behind the pendulum. You can visualize the field by pressing the Preview button. Once you are satisfied with the lighting, the image setting and framing, take care not to change the setup (camera, pendulum, light) until you finish. If you change it, you may have to start anew.
 Close the preview window by clicking on the window bar, then press q, and close the window with the close button.
