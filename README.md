@@ -9,6 +9,7 @@ El programa permite: registrar un vídeo del péndulo; tomar una fotografía del
 
 Los archivos son:
 * gpi.py : el código del programa. El código está escrito en Python.
+* LabScript.pdf : un guión de prácticas explicado para los alumnos de primero que realizan esta práctica.
 * requirements.sh : archivo bash para instalar las librerías y software necesario.
 * iconGPI.png : un icono (no es necesario).
 * script.md : una breve documentación para explicar el funcionamiento del programa.
