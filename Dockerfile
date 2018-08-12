@@ -11,23 +11,23 @@ ENV BUILD_PACKAGES build-essential libavcodec-dev libavformat-dev \
 		python3-skimage python3-picamera python3-matplotlib git
 
 
-ADD . /rasptracking/
-WORKDIR /rasptracking
+ADD . /home/pi/rasptracking/
+WORKDIR /home/pi/
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install $RUNTIME_PACKAGES
-RUN apt-get install $BUILD_PACKAGES && \
-	pip3 install -r requirements.txt && \
-	update-ca-certificates
 RUN wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
-	 unzip opencv.zip && \
-	 wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
-	 unzip opencv_contrib.zip && \
-	 cd /opencv-3.1.00/ && cd build
+         unzip opencv.zip && rm opencv.zip && \
+         wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
+         unzip opencv_contrib.zip && rm opencv_contrib.zip
+RUN apt-get install $BUILD_PACKAGES && \
+	pip3 install -r ./rasptracking/requirements.txt && \
+	update-ca-certificates
 	
-RUN cmake -D MAKE_BUILD_TYPE=RELEASE \
+RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
+	cmake -D MAKE_BUILD_TYPE=RELEASE \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
         -D INSTALL_PYTHON_EXAMPLES=ON \
         -D OPENCV_EXTRA_MODULES_PATH=/home/pi/opencv_contrib-3.1.0/modules \
-        -D BUILD_EXAMPLES=ON && \
-	make -j2 && \
+        -D BUILD_EXAMPLES=ON .. && \
+	make && \
 	make install && ldconfig
