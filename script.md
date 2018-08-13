@@ -1,7 +1,8 @@
-El material empleado es: una Raspberry Pi 3B, con carcasa y picamera, que corre en Raspbian; y un péndulo construido con una esfera de plomo de 1 cm. de radio, colgando de un hilo de 54 cm. de largo, pintada de negro, situada delante de una superficie clara. Con Raspbian viene un programa llamado **omxplayer** que permite visualizar vídeos, y recomendamos instalar **Mirage**, un programa gratuito para visualizar imágenes. 
-La Raspberry Pi debe prepararse instalando algunas algunas librerías, como GTK y OpenCV. Todo ello se logra ejecutando los comandos del archivo bash **requirements.sh**. Hay que tener paciencia con las librerías OpenCV, que pueden tardar _horas_ en instalarse.
+The hardware you need is a Raspberry Pi 3 model B, with a Pi Camera (a box is optional), running on Raspbian; and a pendulum which can be made with a lead bead of about 1 cm. radius, hanging from a thread (a half a meter long thin thread is suitable, because in this case you get a reasonable period). The bead must be painted black matt, and placed in front of a white background (a paper sheet will do). The Raspbian distribution includes a video player called **omxplayer**; you may also find useful a free image displaying software such as **Mirage**. 
 
-El programa que implementa el particle tracking se lanza ejecutando en una terminal la orden **python3 gpi.py**, que abre una interfaz gráfica de usuario.
+Before using the program **gpi**, some libraries and packages (such as GTK and OpenCV) must installed. All this is accomplished with the commands in the bash file **requirements.sh**. Be patient with OpenCV; libraries may take _hours_ to install.
+
+The program to carry out the Particle Tracking technique is called gpi.py; you start it by typing **python3 gpi.py** on a terminal. A graphical user interface will open.
 
 * El botón **Preview** permite ver lo que graba la cámara, para centrar y enfocar el péndulo.
 * El botón **Background Picture** toma unas pocas fotografías del fondo (_retirar el péndulo_) para calcular el promedio. Esa imagen se restará después a cada fotograma del vídeo.
