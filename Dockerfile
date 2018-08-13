@@ -23,7 +23,8 @@ RUN wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
          unzip opencv_contrib.zip && rm opencv_contrib.zip
 RUN apt-get install $BUILD_PACKAGES && \
 	pip3 install -r ./rasptracking/requirements.txt && \
-	update-ca-certificates
+	update-ca-certificates && \
+	apt-get autoremove
 	
 RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
 	cmake -D MAKE_BUILD_TYPE=RELEASE \
@@ -33,3 +34,4 @@ RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
         -D BUILD_EXAMPLES=ON .. && \
 	make -j2 && \
 	make install && ldconfig
+	
