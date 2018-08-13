@@ -8,10 +8,12 @@ ENV BUILD_PACKAGES build-essential libavcodec-dev libavformat-dev \
 		libopenjpeg5 zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev \
 		tcl8.5-dev tk8.5-dev imagemagick gfortran \
 		python2.7-dev python3-dev python3-setuptools python3-tk \ 
-		python3-skimage python3-picamera python3-matplotlib git
+		python3-skimage python3-picamera python3-matplotlib \
+		raspi-config git
 
 
 ADD . /home/pi/rasptracking/
+ADD /boot/config.txt /boot/
 WORKDIR /home/pi/
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install $RUNTIME_PACKAGES
@@ -29,5 +31,5 @@ RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
         -D INSTALL_PYTHON_EXAMPLES=ON \
         -D OPENCV_EXTRA_MODULES_PATH=/home/pi/opencv_contrib-3.1.0/modules \
         -D BUILD_EXAMPLES=ON .. && \
-	make && \
+	make -j2 && \
 	make install && ldconfig
