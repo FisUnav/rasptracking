@@ -1,15 +1,19 @@
 # Rasptracking #
 
-Este repositorio contiene el código para una implementación de Particle Tracking con una Raspberry Pi y su cámara (picamera). 
+This repository contains code and instructions for an implementation of a Particle Tracking system with a Raspberry Pi nanocomputer and a Picamera. 
 
-La idea es emplear una Raspberry Pi y una picamera para realizar el experimento clásico del péndulo (en el cual se obtiene el valor de  g, la aceleración de la gravedad, midiendo el período), pero de manera automática.
+The idea is to use a Raspberry Pi + Picamera to carry out the well-known pendulum experiment. It involves measuring the pendulum period, and calculating the value of g, the gravity acceleration. This can be done by hand with a chronometer, of course. A Particle Tracking technique will automate the procedure.
 
-Para ello, se registra en vídeo el movimiento de un péndulo oscuro sobre fondo blanco. Mediante un tratamiento de imágenes sencillo se obtiene la posición del péndulo en cada fotograma; y graficando las posiciones del péndulo a lo largo del tiempo, se obtiene una sinusoide, de la cual se calcula el período.
-El programa permite: registrar un vídeo del péndulo; tomar una fotografía del fondo (esta imagen se resta a cada fotograma); analizar el vídeo para encontrar la posición de cada fotograma; y guardar los datos. 
+In order to accomplish this, a video must be recorded of the pendulum motion. A dark pendulum over a white background is needed). A simple image processing allows to obtain the pendulum position at every frame. Plotting the position over time will show a sinusoid; from the zero crossings, the period is readily obtained.
 
-Los archivos son:
-* gpi.py : el código del programa para implementar la técnica de particle tracking, escrito en Python.
-* LabScript.pdf : un guión de prácticas explicado para los alumnos de primero que realizan esta práctica.
-* requirements.sh : archivo bash para instalar las librerías y software necesario.
-* iconGPI.png : un icono (no es necesario).
-* script.md : una breve documentación para explicar el funcionamiento del programa (en gran parte repite LabScript.pdf).
+The program allows to do the following: to record a video of the pendulum motion; to capture a still picture of the background (it will be subtracted to each frame); to analize the video in order to obtain the position at every frame; and to save the period data.
+
+The files in this repository are:
+* readme.md : this file.
+* gpy.py : the code ready to run and perform the above tasks. It is written in Python.
+* requirements.sh : a bash file to install the libraries and software needed.
+* script.md : a concise documentation explaining the program features and how to use it. 
+* LabScript.pdf : a laboratory session script intended for first year students. _Note that much of_ scritpt.md _and_ LabScript.pdf _are the same material_.
+* iconGPI.png : an icon (which is not needed to make the program run).
+* Dockerfile
+
