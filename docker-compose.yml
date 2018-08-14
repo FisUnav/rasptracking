@@ -1,0 +1,14 @@
+version: '3'
+services:
+ rasp_image:
+  build: .
+  image: rasp_image:latest
+  container_name: rasptracking
+  volumes:
+   - /tmp/.X11-unix/:/tmp/.X11-unix
+   - /home/pi/Desktop/datos_practicas:/home/pi/rasptracking/dataGPI
+  environment:
+   - DISPLAY=$DISPLAY
+  privileged: true
+  stdin_open: true
+  tty: true
