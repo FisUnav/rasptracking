@@ -33,5 +33,6 @@ RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
         -D OPENCV_EXTRA_MODULES_PATH=/home/pi/opencv_contrib-3.1.0/modules \
         -D BUILD_EXAMPLES=ON .. && \
 	make -j2 && \
-	make install && ldconfig
+	make install && ldconfig && \
+	rm -R /home/pi/opencv-3.1.0/ && rm -R /home/pi/opencv_contrib-3.1.0/
 	

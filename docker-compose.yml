@@ -1,8 +1,8 @@
 version: '3'
 services:
- rasp_image:
+ raspbian_lab:
   build: .
-  image: rasp_image:latest
+  image: raspbian_lab:latest
   container_name: rasptracking
   volumes:
    - /tmp/.X11-unix/:/tmp/.X11-unix
