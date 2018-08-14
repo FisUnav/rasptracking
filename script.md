@@ -1,15 +1,16 @@
-El material empleado es: una Raspberry Pi 3B, con carcasa y picamera, que corre en Raspbian; y un péndulo construido con una esfera de plomo de 1 cm. de radio, colgando de un hilo de 54 cm. de largo, pintada de negro, situada delante de una superficie clara. Con Raspbian viene un programa llamado **omxplayer** que permite visualizar vídeos, y recomendamos instalar **Mirage**, un programa gratuito para visualizar imágenes. 
-La Raspberry Pi debe prepararse instalando algunas algunas librerías, como GTK y OpenCV. Todo ello se logra ejecutando los comandos del archivo bash **requirements.sh**. Hay que tener paciencia con las librerías OpenCV, que pueden tardar _horas_ en instalarse.
+The hardware you need is a Raspberry Pi 3 model B, with a Pi Camera (a box is optional), running on Raspbian; and a pendulum which can be made with a lead bead of about 1 cm. radius, hanging from a thread (a half a meter long thin thread is suitable, because in this case you get a reasonable period). The bead must be painted black matt, and placed in front of a white background (a paper sheet will do). The Raspbian distribution includes a video player called **omxplayer**; you may also find useful a free image displaying software such as **Mirage**. 
 
-El programa que implementa el particle tracking se lanza ejecutando en una terminal la orden **python3 gpi.py**, que abre una interfaz gráfica de usuario.
+Before using the program **gpi**, some libraries and packages (such as GTK and OpenCV) must installed. All this is accomplished with the commands in the bash file **requirements.sh**. Be patient with OpenCV; libraries may take _hours_ to install.
 
-* El botón **Preview** permite ver lo que graba la cámara, para centrar y enfocar el péndulo.
-* El botón **Background Picture** toma unas pocas fotografías del fondo (_retirar el péndulo_) para calcular el promedio. Esa imagen se restará después a cada fotograma del vídeo.
-* El botón **Record Video** graba un vídeo encapsulado en mp4 con la duración en segundos indicada en la casilla _record time_ y con el nombre que se escriba en la casilla _video name_. La picamera graba a 25 frames per second. 
-* Con el botón **View Video** se visualiza el vídeo grabado.
-* El botón **Track** halla la posición del péndulo a lo largo del tiempo.
+The program to carry out the Particle Tracking technique is called gpi.py; you start it by typing **python3 gpi.py** on a terminal. A graphical user interface will open.
 
-A continuación se explica brevemente el procedimiento típico. (En el documento LabScript.pdf está explicado también).
+* The **Preview** button allows to see the camera view, in order to place it and center & focus the pendulum.
+* The **Background Picture** button just acquires a few still pictures of the background (_you must remove the bead_), averages them, and stores the resulting image in order to subtract it from every video frame.
+* The **Record Video** button will record an mp4 video for the seconds indicated in the box _record time_, and will store it with the name indicated in the box _video name_. The PiCamera records at 25 frames (factory default). 
+* The **View Video** button shows the recorded video.
+* The **Track** button finds the pendulum position along time and saves the data.
+
+A typical procedure is explained below. (Remark that in the LabScript.pdf document you can also find a similar explanation).
 
 The camera is focused at 50 cm. Place the camera at such a distance from the pendulum. Set the white screen behind the pendulum. Lighting is of crucial importance; use natural light if possible and avoid the shadow of the sphere as much as possible.
 You will take an image of the background, without the pendulum. After that, you will want a short (~4 seconds) video to test that everything is working fine. Once you have fixed the system variables, you will record a longer (20 seconds) video. The program will then track the bead and provide you the measurements for the period.
