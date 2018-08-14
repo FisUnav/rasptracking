@@ -13,8 +13,8 @@ ENV BUILD_PACKAGES build-essential libavcodec-dev libavformat-dev \
 
 
 ADD . /home/pi/rasptracking/
-ADD /boot/config.txt /boot/
 WORKDIR /home/pi/
+RUN cp /home/pi/rasptracking/config.txt /boot/
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install $RUNTIME_PACKAGES
 RUN wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
