@@ -12,21 +12,25 @@ ENV BUILD_PACKAGES build-essential libavcodec-dev libavformat-dev \
 		raspi-config git
 
 
-ADD . /home/pi/rasptracking/
+#Copy files and set working directory
+ADD . /home/pi/
 WORKDIR /home/pi/
-RUN cp /home/pi/rasptracking/config.txt /boot/
+RUN cp /home/pi/config.txt /boot/
+
+#Install Dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install $RUNTIME_PACKAGES
-RUN wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
-         unzip opencv.zip && rm opencv.zip && \
-         wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
-         unzip opencv_contrib.zip && rm opencv_contrib.zip
 RUN apt-get install $BUILD_PACKAGES && \
-	pip3 install -r ./rasptracking/requirements.txt && \
+	pip3 install -r requirements.txt && \
 	update-ca-certificates && \
 	apt-get autoremove
-	
-RUN cd opencv-3.1.0/ && mkdir build/ && cd build && \
+
+#Install opencv	
+RUN wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
+        unzip opencv.zip && rm opencv.zip && \
+        wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
+        unzip opencv_contrib.zip && rm opencv_contrib.zip && \
+	cd opencv-3.1.0/ && mkdir build/ && cd build && \
 	cmake -D MAKE_BUILD_TYPE=RELEASE \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
         -D INSTALL_PYTHON_EXAMPLES=ON \

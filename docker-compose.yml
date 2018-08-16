@@ -6,7 +6,7 @@ services:
   container_name: rasptracking
   volumes:
    - /tmp/.X11-unix/:/tmp/.X11-unix
-   - /home/pi/Desktop/datos_practicas:/home/pi/rasptracking/dataGPI
+   - /home/pi/Desktop/datos_practicas:/home/pi/dataGPI
   environment:
    - DISPLAY=$DISPLAY
   privileged: true
