@@ -11,7 +11,8 @@ The program allows to do the following: to record a video of the pendulum motion
 The files in this repository are:
 * readme.md : this file.
 * gpy.py : the code ready to run and perform the above tasks. It is written in Python.
-* requirements.sh : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source).
+* requirements.txt : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source).
+* requirements_local.sh: Requirements to install docker and docker-compose.
 * script.md : a concise documentation explaining the program features and how to use it. 
 * LabScript.pdf : a laboratory session script intended for first year students. _Note that much of_ scritpt.md _and_ LabScript.pdf _are the same material_.
 * iconGPI.png : an icon (which is not needed to make the program run).
