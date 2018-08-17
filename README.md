@@ -11,9 +11,10 @@ The program allows to do the following: to record a video of the pendulum motion
 The files in this repository are:
 * readme.md : this file.
 * gpy.py : the code ready to run and perform the above tasks. It is written in Python.
-* requirements.sh : a bash file to install the libraries and software needed.
+* requirements.sh : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source).
 * script.md : a concise documentation explaining the program features and how to use it. 
 * LabScript.pdf : a laboratory session script intended for first year students. _Note that much of_ scritpt.md _and_ LabScript.pdf _are the same material_.
 * iconGPI.png : an icon (which is not needed to make the program run).
-* Dockerfile
-
+* Dockerfile: A Dockerfile with all the requirements to run the program in a docker container.
+* docker-compose.yml: A docker-compose file with all the specifications to create a container enable to access the PICamera and persist data in the folder **/home/pi/Desktop/datos_practicas/**.
+* config.txt: A config file for the camera options to be copied into the container.
