@@ -9,15 +9,15 @@ In order to accomplish this, a video must be recorded of the pendulum motion. A 
 The program allows to do the following: to record a video of the pendulum motion; to capture a still picture of the background (it will be subtracted to each frame); to analize the video in order to obtain the position at every frame; and to save the period data.
 
 The files in this repository are:
-* readme.md : this file.
-* gpy.py : the code ready to run and perform the above tasks. It is written in Python.
-* requirements.txt : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source).
-* requirements_local.sh: Requirements to install docker and docker-compose.
-* Installation.md : a concise documentation explaining how to prepare the hardware and software needed. 
-* LabScript.pdf : a laboratory session script intended for first year students. _Note that much of_ scritpt.md _and_ LabScript.pdf _are the same material_.
-* iconGPI.png : an icon (which is not needed to make the program run).
-* Dockerfile: A Dockerfile with all the requirements to run the program in a docker container.
-* docker-compose.yml: A docker-compose file with all the specifications to create a container enable to access the PICamera and persist data in the folder **/home/pi/Desktop/datos_practicas/**.
-* config.txt: A config file for the camera options to be copied into the container.
+* _readme.md_ : this file.
+* _Installation.md_ : a concise documentation explaining how to prepare the hardware and software needed. 
+* _gpy.py_ : the code ready to run and perform the above tasks. It is written in Python.
+* _LabScript.pdf_ : a laboratory session script intended for first year college students, demonstrating the program features in a typical procedure.
+* _iconGPI.png_ : an icon (which is not really needed to run the program).
+* _Dockerfile_: A Dockerfile with all the requirements to run the program in a docker container.
+* _docker-compose.yml_: A docker-compose file with all the specifications to create a container enable to access the PICamera and persist data in the folder **/home/pi/Desktop/datos_practicas/**.
+* _config.txt_: A config file for the camera options to be copied into the container.
+* _requirements.txt_ : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source). 
+* _requirements_local.sh_: Requirements to install docker and docker-compose.
 
-If you want to prepare the system, you should download all these files to a [Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) with a [Raspberry Pi Camera Module v2](https://www.raspberrypi.org/products/camera-module-v2/). Then follow the steps indicated in the file Installation.md.
+If you want to get the system running, you should download all these files to a [Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) running in Raspbian and supplemented with a [Raspberry Pi Camera Module v2](https://www.raspberrypi.org/products/camera-module-v2/). Then follow the steps indicated in the file Installation.md.
