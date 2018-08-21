@@ -4,9 +4,7 @@ This repository contains code and instructions for an implementation of a Partic
 
 The idea is to use a Raspberry Pi + Raspberry Pi Camera to carry out the well-known pendulum experiment. It involves measuring the pendulum period, and calculating the value of _**g**_, the gravity acceleration. This can be done by hand with a chronometer, of course. A Particle Tracking technique will automate the procedure.
 
-In order to accomplish this, a video must be recorded of the pendulum motion. A dark pendulum over a white background is needed). A simple image processing allows to obtain the pendulum position at every frame. Plotting the position over time will show a sinusoid; from the zero crossings, the period is readily obtained.
-
-The program allows to do the following: to record a video of the pendulum motion; to capture a still picture of the background (it will be subtracted to each frame); to analize the video in order to obtain the position at every frame; and to save the period data.
+In order to accomplish this, a video must be recorded of the pendulum motion. (A dark pendulum over a white background is needed). A simple image processing allows to obtain the pendulum position at every frame. Plotting the position over time will show a sinusoid; from the zero crossings, the period is readily obtained. The program provided here allows to do the following: to record a video of the pendulum motion; to capture a still picture of the background (it will be subtracted to each frame); to analize the video in order to obtain the position at every frame; and to save the period data.
 
 The files in this repository are:
 * _readme.md_ : this file.
