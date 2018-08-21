@@ -13,9 +13,11 @@ The files in this repository are:
 * gpy.py : the code ready to run and perform the above tasks. It is written in Python.
 * requirements.txt : All python requirements to be installed with Python pip (those packages cannot be installed from python3 source).
 * requirements_local.sh: Requirements to install docker and docker-compose.
-* script.md : a concise documentation explaining the program features and how to use it. 
+* Installation.md : a concise documentation explaining how to prepare the hardware and software needed. 
 * LabScript.pdf : a laboratory session script intended for first year students. _Note that much of_ scritpt.md _and_ LabScript.pdf _are the same material_.
 * iconGPI.png : an icon (which is not needed to make the program run).
 * Dockerfile: A Dockerfile with all the requirements to run the program in a docker container.
 * docker-compose.yml: A docker-compose file with all the specifications to create a container enable to access the PICamera and persist data in the folder **/home/pi/Desktop/datos_practicas/**.
 * config.txt: A config file for the camera options to be copied into the container.
+
+If you want to prepare the system, you should download all these files to a [Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) with a [Raspberry Pi Camera Module v2](https://www.raspberrypi.org/products/camera-module-v2/). Then follow the steps indicated in the file Installation.md.
